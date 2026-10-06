@@ -1,0 +1,69 @@
+@theme {
+  /* Palette — dark, editorial, AA-checked against ink */
+  --color-ink: #0b0d12;
+  --color-surface: #151a26;
+  --color-surface-raised: #1d2433;
+  --color-cream: #f6f2e9;
+  --color-muted: #b6bccb;
+  --color-gold: #e0b659;
+  --color-gold-strong: #f0c876;
+  --color-line: #2a3244;
+  --color-danger: #f0a3a3;
+
+  /* Typography — display serif + quiet sans, no third-party fonts */
+  --font-display: Georgia, 'Times New Roman', 'Songti SC', serif;
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Scale — fluid display sizes so 320px viewports never overflow (SC-004) */
+  --text-display: clamp(2.25rem, 9vw, 3.5rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-headline: clamp(1.75rem, 7vw, 2.25rem);
+  --text-headline--line-height: 1.15;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
