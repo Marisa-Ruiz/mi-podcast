@@ -1,5 +1,7 @@
 # mi-podcast
 
+<img width="1920" height="1532" alt="image" src="https://github.com/user-attachments/assets/29079f75-89a3-470c-93fd-d164d262d58f" />
+
 A modern, elegant podcast website — fully static, four pages, 20 mocked
 episodes with in-page audio playback. Built with Next.js (static export),
 TypeScript, and Tailwind CSS. No databases, no feeds, no server runtime:
