@@ -92,14 +92,14 @@ Single Next.js application at repository root: `src/`, `tests/`, `public/` per p
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T022 [P] [US2] Playwright catalog test in `tests/e2e/episodes.spec.ts` asserting count === 20, metadata presence and format, and play control behavior (quickstart V2, SC-002)
+- [X] T022 [P] [US2] Playwright catalog test in `tests/e2e/episodes.spec.ts` asserting count === 20, metadata presence and format, and play control behavior (quickstart V2, SC-002)
 
 ### Implementation for User Story 2
 
-- [ ] T023 [P] [US2] Implement `EpisodeCard` component in `src/components/episode/EpisodeCard.tsx`: number, title, `YYYY-MM-DD` date, formatted duration, description, artwork with `show.artworkUrl` fallback, play control (FR-005)
-- [ ] T024 [P] [US2] Implement `EpisodeList` component in `src/components/episode/EpisodeList.tsx` rendering episodes sorted by `publishedAt` descending (data-model derived views)
-- [ ] T025 [US2] Build Episodes page `src/app/episodes/page.tsx` rendering all 20 episodes via `EpisodeList` with unique title/meta/canonical (FR-002, Constitution SEO minimums)
-- [ ] T026 [US2] Validate User Story 2: run quickstart V2 + playback V3 and `npm run build` gate
+- [X] T023 [P] [US2] Implement `EpisodeCard` component in `src/components/episode/EpisodeCard.tsx`: number, title, `YYYY-MM-DD` date, formatted duration, description, artwork with `show.artworkUrl` fallback, play control (FR-005)
+- [X] T024 [P] [US2] Implement `EpisodeList` component in `src/components/episode/EpisodeList.tsx` rendering episodes sorted by `publishedAt` descending (data-model derived views)
+- [X] T025 [US2] Build Episodes page `src/app/episodes/page.tsx` rendering all 20 episodes via `EpisodeList` with unique title/meta/canonical (FR-002, Constitution SEO minimums)
+- [X] T026 [US2] Validate User Story 2: run quickstart V2 + playback V3 and `npm run build` gate
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -115,15 +115,15 @@ Single Next.js application at repository root: `src/`, `tests/`, `public/` per p
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T027 [P] [US3] Playwright tests in `tests/e2e/about-faq.spec.ts` covering quickstart V4: About content present, FAQ ordered list, toggle reveals answer without reload, answers readable with JS disabled
+- [X] T027 [P] [US3] Playwright tests in `tests/e2e/about-faq.spec.ts` covering quickstart V4: About content present, FAQ ordered list, toggle reveals answer without reload, answers readable with JS disabled
 
 ### Implementation for User Story 3
 
-- [ ] T028 [P] [US3] Create `src/content/faq.ts` with FAQ items per contracts/data-schema.md — question/answer non-empty, unique `order`, sorted display (FR-004, INV-8)
-- [ ] T029 [P] [US3] Build About page `src/app/about/page.tsx` rendering show description and host/production info from `src/content/show.ts` with unique title/meta/canonical (FR-003)
-- [ ] T030 [US3] Implement `FaqAccordion` component in `src/components/ui/FaqAccordion.tsx`: expand/collapse without page reload, fully readable content with JavaScript disabled (FR-004, spec edge case, Constitution IV)
-- [ ] T031 [US3] Build FAQ page `src/app/faq/page.tsx` composing `FaqAccordion` with unique title/meta/canonical (FR-004, Constitution SEO minimums)
-- [ ] T032 [US3] Validate User Story 3: run quickstart V4 and `npm run build` gate
+- [X] T028 [P] [US3] Create `src/content/faq.ts` with FAQ items per contracts/data-schema.md — question/answer non-empty, unique `order`, sorted display (FR-004, INV-8)
+- [X] T029 [P] [US3] Build About page `src/app/about/page.tsx` rendering show description and host/production info from `src/content/show.ts` with unique title/meta/canonical (FR-003)
+- [X] T030 [US3] Implement `FaqAccordion` component in `src/components/ui/FaqAccordion.tsx`: expand/collapse without page reload, fully readable content with JavaScript disabled (FR-004, spec edge case, Constitution IV)
+- [X] T031 [US3] Build FAQ page `src/app/faq/page.tsx` composing `FaqAccordion` with unique title/meta/canonical (FR-004, Constitution SEO minimums)
+- [X] T032 [US3] Validate User Story 3: run quickstart V4 and `npm run build` gate
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -133,14 +133,14 @@ Single Next.js application at repository root: `src/`, `tests/`, `public/` per p
 
 **Purpose**: Improvements that affect multiple user stories; full acceptance validation
 
-- [ ] T033 [P] Responsive verification across all 4 pages at 320px / 768px / 1920px in `tests/e2e/responsive.spec.ts` — no overlap, clipping, or horizontal scroll (SC-004, FR-011)
-- [ ] T034 [P] Keyboard & accessibility pass in `tests/e2e/a11y.spec.ts`: tab through nav and player, Space/Enter toggles playback, visible focus, `aria-current="page"` on active nav link (SC-005, FR-012, Constitution III)
-- [ ] T035 [P] Implement internal link + asset checker script in `scripts/check-links.mjs` wired to `npm run check:links`, run against the static export output (SC-006, Constitution V)
-- [ ] T036 [P] Run content integrity scan (INV-7) for `TODO`/`TBD`/`[placeholder]` markers across shipped content via `tests/unit/content-schema.test.ts` (Constitution V)
-- [ ] T037 SEO metadata audit across `/`, `/episodes`, `/about`, `/faq`: unique title, unique meta description, matching canonical URL per page (Constitution SEO minimums)
-- [ ] T038 Performance pass: compress and size images to display dimensions, confirm minified output and zero third-party scripts, core content readable with JavaScript disabled (SC-007, Constitution IV)
-- [ ] T039 Execute full quickstart.md validation — scenarios V1 through V7 with `npm test`, `npm run build`, `npm run test:e2e`, `npm run check:links` — fix any regressions
-- [ ] T040 Update `README.md` with setup, dev, build, test, and static-deploy instructions (Constitution Development Workflow: build verified, automated deploy from main)
+- [X] T033 [P] Responsive verification across all 4 pages at 320px / 768px / 1920px in `tests/e2e/responsive.spec.ts` — no overlap, clipping, or horizontal scroll (SC-004, FR-011)
+- [X] T034 [P] Keyboard & accessibility pass in `tests/e2e/a11y.spec.ts`: tab through nav and player, Space/Enter toggles playback, visible focus, `aria-current="page"` on active nav link (SC-005, FR-012, Constitution III)
+- [X] T035 [P] Implement internal link + asset checker script in `scripts/check-links.mjs` wired to `npm run check:links`, run against the static export output (SC-006, Constitution V)
+- [X] T036 [P] Run content integrity scan (INV-7) for `TODO`/`TBD`/`[placeholder]` markers across shipped content via `tests/unit/content-schema.test.ts` (Constitution V)
+- [X] T037 SEO metadata audit across `/`, `/episodes`, `/about`, `/faq`: unique title, unique meta description, matching canonical URL per page (Constitution SEO minimums)
+- [X] T038 Performance pass: compress and size images to display dimensions, confirm minified output and zero third-party scripts, core content readable with JavaScript disabled (SC-007, Constitution IV)
+- [X] T039 Execute full quickstart.md validation — scenarios V1 through V7 with `npm test`, `npm run build`, `npm run test:e2e`, `npm run check:links` — fix any regressions
+- [X] T040 Update `README.md` with setup, dev, build, test, and static-deploy instructions (Constitution Development Workflow: build verified, automated deploy from main)
 
 ---
 

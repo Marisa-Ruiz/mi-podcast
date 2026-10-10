@@ -139,7 +139,7 @@ export const episodes: Episode[] = [
     "publishedAt": "2026-07-02",
     "durationSeconds": 2700,
     "description": "Names for the creative stalls, and gentle exits that actually work.",
-    "audioUrl": "/audio/episode-sample.wav",
+    "audioUrl": null,
     "artworkUrl": "/images/episode-art.svg"
   },
   {
